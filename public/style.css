@@ -1,0 +1,214 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #6C63FF; /* Deep Indigo */
+  --secondary-color: #FF6584; /* Hot Pink */
+  --accent-color: #F9A826; /* Bright Yellow */
+  --success-color: #00C851; /* Emerald Green */
+  --danger-color: #FF4444; /* Red */
+  --background-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --text-color: #ffffff;
+  --font-heading: 'Fredoka One', cursive;
+  --font-body: 'Nunito', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--background-gradient);
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.3s ease;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 15px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: var(--font-body);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05); /* Bounce effect */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+  background-color: var(--accent-color);
+  color: #333;
+}
+
+/* Quiz Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.timer-box, .score-box {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-btn {
+  background: white;
+  color: #333;
+  text-align: left; 
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.option-btn:hover {
+  background: #f0f0f0;
+  transform: translateX(5px); 
+}
+
+/* Specific feedback classes */
+.option-btn.correct {
+  background-color: var(--success-color);
+  color: white;
+  animation: pulse 0.5s;
+}
+
+.option-btn.wrong {
+  background-color: var(--danger-color);
+  color: white;
+  animation: shake 0.5s;
+}
+
+/* Leaderboard */
+.leaderboard-list {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.leaderboard-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leaderboard-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-list li:last-child {
+  border-bottom: none;
+}
+
+.leaderboard-list li span {
+  font-weight: bold;
+}
+
+/* Utility */
+.hidden {
+  display: none !important;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}

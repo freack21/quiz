@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERC Fun Quiz!</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Meta tags for SEO best practices -->
+    <meta name="description" content="A fun and colorful quiz about robotics and the ERC team.">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Section 1: Landing Page -->
+        <section id="landing-page" class="active">
+            <h1>🚀 ERC Quiz Challenge! 🤖</h1>
+            <p>Welcome, Future Engineer!</p>
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Enter your cool nickname..." maxlength="15">
+            </div>
+            <button id="start-btn" class="btn-primary">START GAME!</button>
+        </section>
+
+        <!-- Section 2: Quiz Page -->
+        <section id="quiz-page" class="hidden">
+            <div class="header">
+                <div class="timer-box">
+                    ⏳ <span id="time-left">60</span>s
+                </div>
+                <div class="score-box">
+                    ⭐ Score: <span id="current-score">0</span>
+                </div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="question-text">Question goes here?</h2>
+            </div>
+
+            <div class="options-container" id="options-container">
+                <!-- Options will be injected here -->
+            </div>
+        </section>
+
+        <!-- Section 3: Leaderboard Page -->
+        <section id="leaderboard-page" class="hidden">
+            <h1>🏆 Hall of Fame 🏆</h1>
+            <div class="results-summary">
+                <p>Great job, <span id="result-username">User</span>!</p>
+                <p>Your Score: <span id="final-score">0</span>/3</p>
+                <p>Time Left: <span id="final-time">0</span>s</p>
+            </div>
+            
+            <div class="leaderboard-list">
+                <h3>Top 10 Players</h3>
+                <ul id="leaderboard-list">
+                    <!-- Leaderboard items injected here -->
+                    <li>Loading...</li>
+                </ul>
+            </div>
+
+            <button id="restart-btn" class="btn-secondary">Play Again 🔄</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
