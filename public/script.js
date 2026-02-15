@@ -48,21 +48,21 @@ document.addEventListener('DOMContentLoaded', () => {
             question: "Algoritma Computer Vision versi berapa yang digunakan untuk deteksi bola secara real-time?",
             options: [
                 "A. YOLOv5",
-                "B. YOLOv8",
-                "C. Google Lens",
+                "B. Google Lens",
+                "C. YOLOv8",
                 "D. OpenCV Basic"
             ],
-            correctIndex: 1 // B
+            correctIndex: 2 // C
         },
         {
             question: "Apa Middleware yang digunakan sebagai jembatan komunikasi antar node sistem pada robot?",
             options: [
-                "A. Arduino C++",
-                "B. Node.js",
-                "C. ROS (Robot Operating System)",
+                "A. ROS (Robot Operating System)",
+                "B. Arduino C++",
+                "C. Node.js",
                 "D. Socket.IO"
             ],
-            correctIndex: 2 // C
+            correctIndex: 0 // A
         },
         {
             question: "Mekanisme tendangan robot Tim Bertuah menggunakan sistem dual-mode. Dua jenis tendangan apa yang bisa dihasilkan oleh solenoid robot?",
@@ -78,11 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
             question: "Apa perbedaan utama format pertandingan antara Tingkat Wilayah dan Tingkat Nasional?",
             options: [
                 "A. Wilayah pakai remote, Nasional otonom",
-                "B. Wilayah Daring (fokus goal challenge), Nasional Luring (pertandingan 3 vs 3)",
-                "C. Wilayah di lapangan rumput, Nasional di lapangan semen",
-                "D. Wilayah pakai bola plastik, Nasional bola resmi FIFA"
+                "B. Wilayah di lapangan rumput, Nasional di lapangan semen",
+                "C. Wilayah pakai bola plastik, Nasional bola resmi FIFA",
+                "D. Wilayah Daring (fokus goal challenge), Nasional Luring (pertandingan 3 vs 3)",
             ],
-            correctIndex: 1 // B
+            correctIndex: 3 // D
         }
     ];
 

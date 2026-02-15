@@ -1,6 +1,11 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap');
 
+/* Global box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 :root {
   --primary-color: #6C63FF; /* Deep Indigo */
   --secondary-color: #FF6584; /* Hot Pink */
@@ -22,7 +27,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-y: auto; /* Allow scrolling if content is long */
 }
 
 .container {
@@ -211,4 +216,53 @@ button:active {
   50% { transform: translateX(5px); }
   75% { transform: translateX(-5px); }
   100% { transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+    width: 90%; 
+    margin: 10px; /* Extra safety margin */
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .option-btn {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .timer-box, .score-box {
+      width: 100%;
+      box-sizing: border-box;
+  }
+  
+  .leaderboard-list li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+  }
 }
